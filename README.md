@@ -32,3 +32,11 @@ This app will look for text in a url and compare it with the [standard](https://
 	"success": Boolean
 }
 ```
+
+# ENV Requirements
+
+Create a .env file and add these fields
+
+```
+GEMINI_API_KEY=KEY_HERE
+```
