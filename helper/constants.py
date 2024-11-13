@@ -29,7 +29,29 @@ Please return a list of non-compliant findings in the following JSON format:
     ...
   ]
 }}
-"""
+# """
+
+# prompt = """
+# Check if the following webpage content complies with the policy provided.
+
+# **Policy**:
+# {standard}
+
+# **Webpage Content**:
+# {text}
+
+# **Instructions**:
+# List each non-compliant issue found in JSON format as follows:
+
+# {{
+#   "non_compliant_issues": [
+#     {{
+#       "text": "Non-compliant text from webpage",
+#       "policy_violation": "Relevant policy rule violated"
+#     }}
+#   ]
+# }}
+# """
 
 LLM_PROMPT = PromptTemplate.from_template(prompt)
 

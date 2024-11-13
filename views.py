@@ -35,6 +35,7 @@ def invoke_llm(prompt):
     return extract_json(response)
     
     
+# Assuming the url is of static website - can be fetched with requests no selenium is needed
 def get_text_content_from_url(url):
     # Load the webpage content from the given URL and return it as a string
     loader = UnstructuredURLLoader(urls=[url])
@@ -60,7 +61,6 @@ def compliance_checker():
     
     try:
         result = invoke_llm(LLM_PROMPT.format(standard=standard_text, text=to_be_tested_text))
-    
         return {"success": True, "data": result}
 
     except Exception as e:
